@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+
+    <div class="todo-app">
+          <h1>TODO Lİst</h1> 
+        <div class="add">
+        <input type="text">
+        <button>Add</button>    
+        </div>
+     
+        <ul>
+            <li> <span>Salam</span><i class='bx bx-trash'></i> <i class='bx bx-check'></i></li>
+            <li> <span>Necesen</span><i class='bx bx-trash'></i> <i class='bx bx-check'></i></li>
+        </ul>
+    </div>
+    
+
+    <section class="blog section " id="blog">
+
+        <div class="blog_cotainer conatiner">
+            <ul class="blog_filters">
+                <li data-filter="*" class="filter_active">All</li>
+                <li data-filter=".filter-smm">Marketing</li>
+                <li data-filter=".filter-seo">Seo</li>
+                <li data-filter=".filter-web">Web</li>
+            </ul>
+
+            <div class="blog_wrap-container">
+                <div class="blog_item filter-smm">
+                    <div class="blog_wrap">
+                        <img
+                            src="./images/ab-testi.jpg"
+                            class="img-fluid" alt>
+                        <div class="blog_info">
+                            <h4>Forest</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog_item filter-web">
+                    <div class="blog_wrap">
+                        <img
+                            src="./images/webb.jpg"
+                            class=" webb" alt>
+                        <div class="blog_info">
+                            <h4>Forest</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog_item filter-seo">
+                    <div class="blog_wrap">
+                        <img
+                            src="./images/sem.jpg"
+                            class="img-fluid" alt>
+                        <div class="blog_info">
+                            <h4>Forest</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog_item filter-smm">
+                    <div class="blog_wrap">
+                        <img
+                            src="./images/marka.jpg"
+                            class="img-fluid" alt>
+                        <div class="blog_info">
+                            <h4>Forest</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog_item filter-smm">
+                    <div class="blog_wrap">
+                        <img
+                            src="./images/b2c.jpg"
+                            class="img-fluid" alt>
+                        <div class="blog_info">
+                            <h4>Forest</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog_item filter-smm">
+                    <div class="blog_wrap">
+                        <img
+                            src="./images/guerilla.jpeg"
+                            class="img-fluid" alt>
+                        <div class="blog_info">
+                            <h4>Forest</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <div class="cart-icon">
+        <i class='bx bx-cart'></i>
+        <span id="cart-count">0</span>
+    </div>
+
+    <div class="product-app">
+   
+        <div class="product">
+            <img src="https://dlcdnwebimgs.asus.com/gain/8b25250f-bf55-425f-93bd-b5d8e2744b3e/" alt="">
+            <div class="product-info">
+                <h2>ASUS TUF F15</h2>
+                <p>Price: $1115</p>
+                <button class="add-to-cart" data-name="ASUS TUF F15" data-price="1115"><i class='bx bx-cart'></i> Səbətə əlavə et</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://www.soliton.az/images/articles/2022/09/09/20220909110929211_c1_1.jpg" alt="">
+            <div class="product-info">
+                <h2>Apple iPhone 14 Pro</h2>
+                <p>Price: $999</p>
+                <button class="add-to-cart" data-name="Apple iPhone 14 Pro" data-price="999"><i class='bx bx-cart'></i> Səbətə əlavə et</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://smarton.az/storage/products/47518/telefon-samsung-galaxy-s22-ultra-5g-12gb-256gb-black-detail.jpg" alt="">
+            <div class="product-info">
+                <h2>Samsung Galaxy S22 Ultra</h2>
+                <p>Price: $699</p>
+                <button class="add-to-cart" data-name="Samsung Galaxy S22 Ultra" data-price="699"><i class='bx bx-cart'></i> Səbətə əlavə et</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="cart-overlay" id="cart-overlay">
+        <div id="cart">
+            <h2>Sepet</h2>
+            <ul></ul>
+            <p>Total: $<span id="total-price">0</span></p>
+            <button id="close-cart">Kapat</button>
+        </div>
+    </div>
+
+
+    <input type="text" id="search" placeholder="axtar...">
+    <button class="btn"  id="add-row-btn">Add Row</button>
+
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Tablo satırları dinamik olarak burada oluşturulacak -->
+            <tr>
+                <td>1</td>
+                <td>Xedice</td>
+                <td>Memmedova</td>
+                <td>16</td>
+                <td><i class='bx bxs-edit-alt'></i></td>
+                <td><i class='bx bx-trash'></i></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Kenan</td>
+                <td>Memmedov</td>
+                <td>20</td>
+                <td><i class='bx bxs-edit-alt'></i></td>
+                <td><i class='bx bx-trash'></i></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nazli</td>
+                <td>Memmedova</td>
+                <td>12</td>
+                <td><i class='bx bxs-edit-alt'></i></td>
+                <td><i class='bx bx-trash'></i></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="add-row-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="surname" placeholder="Surname">
+            <input type="number" id="age" placeholder="Age">
+            <button id="create-btn">Create</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
