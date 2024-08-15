@@ -9,7 +9,7 @@ $(function() {
         }
     });
 
-    menu.on("click", ".bx-trash", function() {
+    menu.on("click", ".silme", function() {
         $(this).parent().remove();
     });
 
@@ -140,6 +140,8 @@ $(function() {
     $('#cart').on('click', '.remove-item', function() {
     // Silinəcək parrent elementini tapır və silir
         let productItem = $(this).parent(); 
+        // console.log(productItem);
+        $($(this))
         
         let quantity = parseInt(productItem.find('.quantity').eq(0).text());
         let price = parseFloat(productItem.attr('data-price'));
