@@ -31,7 +31,7 @@ $(function() {
         const filterValue = $(this).data('filter');
 
         items.each(function () {
-            // Blog öğeleri bu filtreye göre gösterilir veya gizlenir; filtre değeri * ise, tüm öğeler gösterilir.
+          
             if (filterValue === '*' || $(this).hasClass(filterValue.substring(1))) {
                 $(this).show();
             } else {
